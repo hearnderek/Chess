@@ -1,20 +1,5 @@
 import os
 clear = lambda: os.system('cls')
-# Tasks:
-#
-#   1. [X] Teams
-#   2. [ ] Valid Moves
-#       2.1 [ ] My team vs theirs
-#   3. [ ] Possible Moves
-#       3.1 [ ] Rook
-#           3.1.1 [ ] Infinate Moves
-#       3.2 [ ] Knight
-#       3.3 [ ] Bishop
-#       3.4 [ ] Queen
-#       3.5 [X] King
-#       3.6 [ ] Pawn
-#
-
 
 def add_c(c,i):
     return chr(ord(c) + i)
