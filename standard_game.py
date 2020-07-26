@@ -1,5 +1,13 @@
+"""
+Run a standard game of chess
+
+This gives the rules to chess, and the game loop.
+"""
+from os import system
 from pieces import Rook, Bishop, Knight, King, Queen, Pawn
 from board import Board
+
+clear = lambda: system('cls')
 
 def standard_start(board):
     """ Populate a black board with pieces """
@@ -71,3 +79,25 @@ def try_user_movement(key, board, team):
 
     board.move(start, end)
     return True
+
+def standard_game_loop():
+    """ Play a game of chess (No AI)"""
+    board = Board()
+    standard_start(board)
+
+    userin = ""
+    team = 0
+    teams = ["white", "black"]
+
+    while userin != "exit":
+        clear()
+        board.draw()
+
+        print(teams[team], "Enter Move -- example: E8,E7")
+        while True:
+            userin = input()
+            print()
+            if userin == "exit" or try_user_movement(userin, board, team):
+                team = (team + 1) & 1
+                break
+            print("Invalid.")

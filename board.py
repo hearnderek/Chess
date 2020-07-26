@@ -1,8 +1,10 @@
-
-import pieces
+"""
+A Basic Chess Board
+"""
 
 class Board():
-    """ The Knight """
+    """ The board, with storage for piece locations """
+
     def __init__(self):
         self.rows = list(range(8, 0, -1))
         self.cols = list("ABCDEFGH")

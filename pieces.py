@@ -1,4 +1,8 @@
+"""
+Basic Piece Classes
 
+Contains the rules for how pieces move, but need to be actived by x.init_move_gens
+"""
 def add_c(char, i):
     """ ("A", 1) -> "B" """
     return chr(ord(char) + i)
